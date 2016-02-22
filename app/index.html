@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="stopwatch-app">
+	<head>
+		<meta name="charset" content="utf-8"/>
+		<title>Stop Watch</title>
+		<!-- build:css css/style.css -->
+		<link rel="stylesheet" href="css/app.css" />
+		<link rel="stylesheet" href="css/fonts.css" />
+		<link rel="stylesheet" href="css/controls.css" />
+		<link rel="stylesheet" href="css/list.css" />
+		<link rel="stylesheet" href="css/lcd-timer.css" />
+		<!-- endbuild -->
+	</head>
+	<body>
+		
+		<div ng-include="'views/stopwatch.html'" class="stopwatch"></div>
+		
+		<!-- build:js js/scripts.js -->
+		<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+		<script type="text/javascript" src="js/modules/stopwatch.module.js"></script>
+		<script type="text/javascript" src="js/directives/stopwatch.directive.lcd-timer.js"></script>
+		<script type="text/javascript" src="js/filters/stopwatch.filter.extract-from-time.js"></script>
+		<script type="text/javascript" src="js/controllers/stopwatch.controller.js"></script>
+		<!-- endbuild -->
+	</body>
+</html>

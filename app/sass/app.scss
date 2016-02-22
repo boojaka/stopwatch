@@ -1,0 +1,18 @@
+
+@import "settings";
+
+html {
+	background: $pageBgColor;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background: $pageBgColor;
+	color: $pageTextColor;
+}
+
+.app-container {
+	width: $appContainerWidth;
+	margin: 0 auto;
+}

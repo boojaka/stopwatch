@@ -1,0 +1,24 @@
+
+<div class="app-container" ng-controller="StopWatchController as stopwatchController" ng-cloak>
+	<div class="controls">
+		<stopwatch-lcd-timer value="stopwatchController.time" animate="stopwatchController.tickFrom != null"></stopwatch-lcd-timer>
+		<div class="panel">
+			<button class="btn btn-toggle" ng-click="stopwatchController.toggleTick()" ng-class="{playing:stopwatchController.tickFrom != null}">{{stopwatchController.tickFrom == null ? 'Play' : 'Pause'}}</button>
+			<button class="btn btn-newlap" ng-click="stopwatchController.addRecord()"></button>
+			<button class="btn btn-reset" ng-click="stopwatchController.reset()"></button>
+		</div>
+	</div>
+	<div class="list">
+		<div class="row" ng-repeat="item in stopwatchController.records">
+			<div class="col time">
+				<stopwatch-lcd-timer value="item.time"></stopwatch-lcd-timer>
+			</div>
+			<div class="col desc">
+				<input type="text" ng-model="item.desc" />
+			</div>
+			<div class="col actions">
+				<button class="btn-remove" ng-click="stopwatchController.removeRecord($index)">REMOVE</button>
+			</div>
+		</tr>
+	</div>
+</div>

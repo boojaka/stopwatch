@@ -1,0 +1,17 @@
+
+@import "settings";
+
+.stopwatch {
+	.lcd-timer {
+		position: relative;
+		font-family: ds-digital;
+		text-align: center;
+		z-index: 1;
+		&:before {
+			position: absolute;
+			content: $lcdTimerBgFormat;
+			text-align: center;
+			z-index: -1;
+		}
+	}
+}
